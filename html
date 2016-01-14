@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html ng-app="dailyFire">
+    <head>
+        <title>API Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="fire.js"></script>
+    </head>
+    
+    <body>
+        <header>
+			<nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/">Daily Fire Incidents</a>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Home</a></li>
+                    </ul>
+                </div>
+			</nav>
+		</header>
+
+        <div class="container">
+            <div ng-controller='homeController'>
+                <div style="width: 50%" class="col-md-6">
+            <li ng-repeat="x in names track by $index">    
+            <div >{{x}}</div>
+                </li>
+                </div>
+                <div class="col-md-6">
+                <li ng-repeat="y in companies track by $index" class="col-md-6 flow right">
+            <div>{{y}}</div>
+              </li>
+                    </div>
+            
+                </div>
+		</div>
+    </body>
+</html>
